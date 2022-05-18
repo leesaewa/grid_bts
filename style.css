@@ -1,0 +1,549 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  padding: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 2fr 2fr 1fr;
+      grid-template-rows: 2fr 2fr 1fr;
+  grid-auto-flow: column;
+  background: #ff7827;
+  gap: 5px;
+  line-height: normal;
+  overflow-y: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #ff7827;
+  color: #fff;
+}
+
+::selection {
+  background: #ff7827;
+  color: #fff;
+}
+
+span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+}
+
+a, button {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+header {
+  grid-row: span 3;
+  position: relative;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav h1 {
+  padding: 20px;
+  font-size: 26px;
+  margin-top: 56px;
+  border-bottom: 1px solid #000;
+}
+
+header nav ul li {
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+}
+
+header nav ul li a {
+  color: #000;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+header nav ul li a:hover {
+  background: #ff7827;
+  color: #fff;
+}
+
+header .discography ul {
+  padding: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .discography ul li {
+  width: 30%;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+header .discography ul li h2 {
+  font-weight: bold;
+}
+
+header .discography ul li a {
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+header .discography ul li a img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header .discography ul li a:hover {
+  color: #ff7827;
+  text-decoration: underline;
+}
+
+header .discography ul li a:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header .discography ul li a p {
+  font-size: 12px;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding-top: 5px;
+}
+
+header .discography button {
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-align: center;
+  background: RGB(255, 120, 39, 0.6);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  padding: 8px;
+}
+
+header .discography button:hover {
+  border: 1px solid RGB(255, 120, 39, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+section {
+  position: relative;
+  background: #fff;
+}
+
+section#home {
+  grid-row: span 2;
+  padding: 20px;
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/schedule_btm.png") center -2% no-repeat #ffdd02;
+  background-size: 180%;
+  z-index: 0;
+}
+
+section#home:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/schedule_btm.png") center top no-repeat;
+  background-size: 180%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+section#home h2 {
+  font-size: 32px;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+section#home iframe {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  z-index: 2;
+}
+
+section#home video {
+  width: 100%;
+}
+
+section#services {
+  padding: 20px;
+  background-color: #ff7827;
+  color: #fff;
+}
+
+section#services audio {
+  margin-top: 56px;
+  width: 100%;
+}
+
+section#third-sec {
+  grid-row: span 2;
+}
+
+section#third-sec input {
+  display: none;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li:nth-child(1) > div {
+  -webkit-animation: slide 32000ms infinite -2000ms linear;
+          animation: slide 32000ms infinite -2000ms linear;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li:nth-child(2) > div {
+  -webkit-animation: slide 32000ms infinite 6000ms linear;
+          animation: slide 32000ms infinite 6000ms linear;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li:nth-child(3) > div {
+  -webkit-animation: slide 32000ms infinite 14000ms linear;
+          animation: slide 32000ms infinite 14000ms linear;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li:nth-child(4) > div {
+  -webkit-animation: slide 32000ms infinite 22000ms linear;
+          animation: slide 32000ms infinite 22000ms linear;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li > label[for="slide1"] {
+  -webkit-animation: dot 32000ms infinite -2000ms;
+          animation: dot 32000ms infinite -2000ms;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li > label[for="slide2"] {
+  -webkit-animation: dot 32000ms infinite 6000ms;
+          animation: dot 32000ms infinite 6000ms;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li > label[for="slide3"] {
+  -webkit-animation: dot 32000ms infinite 14000ms;
+          animation: dot 32000ms infinite 14000ms;
+}
+
+section#third-sec #slideAuto:checked ~ ul > li > label[for="slide4"] {
+  -webkit-animation: dot 32000ms infinite 22000ms;
+          animation: dot 32000ms infinite 22000ms;
+}
+
+section#third-sec ul {
+  background-color: #fff;
+}
+
+section#third-sec ul li {
+  width: 100%;
+  position: absolute;
+}
+
+section#third-sec ul li div {
+  height: 82.2vh;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  vertical-align: top;
+  visibility: hidden;
+}
+
+section#third-sec ul li label {
+  cursor: pointer;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ff7827;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+section#third-sec ul li:nth-child(1) label {
+  left: 0.5em;
+}
+
+section#third-sec ul li:nth-child(2) label {
+  left: 2em;
+}
+
+section#third-sec ul li:nth-child(3) label {
+  left: 3.5em;
+}
+
+section#third-sec ul li:nth-child(4) label {
+  left: 5em;
+}
+
+section#four-sec {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-3/qlCSzeFr1Gfr_m.jpg") center top no-repeat;
+  background-size: cover;
+  height: 40vh;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#five-sec {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  background: #ff7827;
+}
+
+section#five-sec ul {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (10vh)[4];
+      grid-template-rows: repeat(4, 10vh);
+}
+
+section#five-sec ul li {
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#five-sec ul li:nth-child(1) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-1/loveGAyUsoLN.jpg") center center no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+section#five-sec ul li:nth-child(2) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-3/mecggqZdYNS3_m.jpg") center center no-repeat;
+  background-size: 150%;
+}
+
+section#five-sec ul li:nth-child(3) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-2/szzm35lgmIor_m.jpg") center 70% no-repeat;
+  background-size: 150%;
+}
+
+section#five-sec ul li:nth-child(4) {
+  grid-row: span 2;
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-1/m30Jz5wGEjhe.jpg") center top no-repeat;
+  background-size: cover;
+}
+
+section#five-sec ul li:nth-child(5) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-3/xXAGDqox6dJf_m.jpg") center 25% no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+section#last-sec {
+  grid-column: span 2;
+  background: #ff7827;
+}
+
+section#last-sec ul {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: 1fr 1fr 4fr;
+      grid-template-columns: 1fr 1fr 4fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+}
+
+section#last-sec ul li {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+section#last-sec ul li:nth-child(1) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-3/f76GputW8U0U_m.jpg") center center no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+
+section#last-sec ul li:nth-child(2) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-1/ld4hrOPyA7Dd.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+section#last-sec ul li:nth-child(3) {
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-1/nv5BhkZyc5I0.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+section#last-sec ul li:nth-child(4) {
+  grid-row: span 2;
+  background: url("https://ibighit.com/bts/images/bts/discography/butter-2/concept_version-1/skPOvkBsHexc.jpg") center 34% no-repeat;
+  background-size: cover;
+}
+
+section#four-sec:hover .overlay, section#five-sec li:hover .overlay, section#last-sec li:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+section#four-sec:hover, section#five-sec li:hover, section#last-sec li:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+section .overlay {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section .overlay:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: RGB(255, 120, 39, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+section .overlay small {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@-webkit-keyframes slide {
+  0%, 100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  6%, 25% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+  30%, 50% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+@keyframes slide {
+  0%, 100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  6%, 25% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+  30%, 50% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+@-webkit-keyframes dot {
+  0%, 24% {
+    background-color: #ff7827;
+  }
+  25%, 100% {
+    background: #FFF;
+  }
+}
+
+@keyframes dot {
+  0%, 24% {
+    background-color: #ff7827;
+  }
+  25%, 100% {
+    background: #FFF;
+  }
+}
